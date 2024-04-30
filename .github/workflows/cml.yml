@@ -2,11 +2,11 @@ name: model-training
 on: [push]
 jobs:
   run:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-      - uses: iterative/setup-cml@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+      - uses: iterative/setup-cml@v3
       - name: Train model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
