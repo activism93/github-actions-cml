@@ -18,6 +18,6 @@ jobs:
           cat metrics.txt >> report.md
 
           echo "## Data viz" >> report.md
-          echo '![](github-actions-project/github-actions-project/feature_importance.png "feature importance")' >> report.md
-          echo '![](github-actions-project/github-actions-project/residuals.png "residuals")' >> report.md
-          cml comment create report.md
+          echo "![Plot](/.feature_importance.png)" >> report.md
+          echo "![Plot](esiduals.png)" >> report.md
+          cml-send-comment report.md
